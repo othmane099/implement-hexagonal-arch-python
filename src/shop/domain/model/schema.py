@@ -1,6 +1,4 @@
-from typing import List
-
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
 
 class ProductDTO(BaseModel):

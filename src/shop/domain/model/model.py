@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Any
 
-from src.shop.domain.model.schema import ProductDTO
+from .schema import ProductDTO
 
 
 @dataclass

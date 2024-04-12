@@ -12,7 +12,7 @@ class ProductUnitOfWorkImpl(ProductUnitOfWork):
 
     def __enter__(self):
         self.session: Session = self.session_factory()
-        self.product = ProductRepositoryImpl(self.session)
+        self.repository = ProductRepositoryImpl(self.session)
         return super().__enter__()
 
     def __exit__(self, *args):
