@@ -6,7 +6,6 @@ from src.shop.domain.model.schema import ProductDTO
 
 @dataclass
 class Product:
-    uuid: str
     name: str
     price: float
     stock: int
