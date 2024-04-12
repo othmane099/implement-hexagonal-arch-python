@@ -5,7 +5,7 @@ from src.shop.domain.model import model
 
 class ProductRepository(ABC):
     @abstractmethod
-    def _add(self, calculation: model.Product) -> None:
+    def _add(self, product: model.Product) -> None:
         raise NotImplementedError
 
     @abstractmethod
@@ -13,7 +13,7 @@ class ProductRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def _get_by_name(self, action: str) -> model.Product:
+    def _get_by_name(self, name: str) -> model.Product:
         raise NotImplementedError
 
     @abstractmethod
