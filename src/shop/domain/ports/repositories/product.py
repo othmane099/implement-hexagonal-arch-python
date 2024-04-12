@@ -8,7 +8,8 @@ class ProductRepository(ABC):
     def add(self, product: model.Product) -> None:
         raise NotImplementedError
 
-    def delete_by_id(self, id: int) -> None:
+    @abstractmethod
+    def delete_by_id(self, id_: int):
         raise NotImplementedError
 
     @abstractmethod

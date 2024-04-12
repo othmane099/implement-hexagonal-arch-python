@@ -1,6 +1,7 @@
 import pytest
 
 from src.shop.adapters.repositories.fake_product_repository import FakeProductRepository
+from src.shop.adapters.unit_of_work.fake_product_uow import FakeProductUnitOfWork
 from src.shop.domain.model.model import product_factory
 
 
@@ -25,3 +26,7 @@ def get_product_model_object():
 @pytest.fixture(scope="module")
 def get_fake_product_repository():
     return FakeProductRepository()
+
+@pytest.fixture(scope="module")
+def get_fake_product_uow():
+    return FakeProductUnitOfWork()
