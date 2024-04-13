@@ -1,4 +1,5 @@
 from src.shop.domain.model import model
+from src.shop.domain.model.model import Product
 from src.shop.domain.ports.repositories.product import ProductRepository
 
 
@@ -7,8 +8,10 @@ class ProductRepositoryImpl(ProductRepository):
         super().__init__()
         self.session = session
 
-    def add(self, product: model.Product) -> None:
+    def add(self, product: model.Product) -> Product:
         self.session.add(product)
+        return product
+
 
     def get(self, id_: int) -> model.Product:
         return self.session.query(model.Product).filter_by(id=id_).first()

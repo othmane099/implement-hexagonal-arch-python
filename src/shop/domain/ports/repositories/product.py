@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
 
 from src.shop.domain.model import model
+from src.shop.domain.model.model import Product
 
 
 class ProductRepository(ABC):
     @abstractmethod
-    def add(self, product: model.Product) -> None:
+    def add(self, product: model.Product) -> Product:
         raise NotImplementedError
 
     @abstractmethod

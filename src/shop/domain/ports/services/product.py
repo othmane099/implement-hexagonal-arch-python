@@ -11,6 +11,11 @@ class ProductService(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def create_product(self, product: schema.ProductDTO):
+    def create_product(self, product: schema.ProductDTO) -> schema.ProductDTO:
+        raise NotImplementedError
+
+
+    @abstractmethod
+    def all_products(self):
         raise NotImplementedError
 

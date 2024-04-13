@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from typing import List, Any
 
 from .schema import ProductDTO
@@ -9,6 +9,9 @@ class Product:
     name: str
     price: float
     stock: int
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
 
 
 def product_factory(**kwargs: dict[str, Any]) -> Product:
